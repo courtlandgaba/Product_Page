@@ -1,15 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400);
+
 body {
-    margin:0;
     padding: 0;
     background-color: rgb(235, 236, 237);
 }
 .header {
+    position: fixed;
     height: 40px;
     width: 100%;
     background-color: rgb(61, 67, 77);
     padding: 0;
-    margin: 0;
+    margin: -8px;
     box-shadow: 0 4px 2px -2px gray;
+    z-index: 3;
 }
 
 .header-left {
@@ -19,9 +22,16 @@ body {
 
 .header-left a {
     color: white;
+    display: inline-block;
     text-decoration: none;
-    padding: 0;
     vertical-align: middle;
+    font-family: "quicksand";
+    font-size: 25px;
+    margin-top: 4px;
+    margin-left: 200px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
 }
 .header-left a:hover{
     color: #dfdfdf;
@@ -35,15 +45,143 @@ body {
     display: inline-block;
 }
 
-.cart {
-    color: white;
-    background-color: rgb(187, 190, 196);
+ul {
+    padding: 0;
+    margin: 0;
 }
 
+.cart {
+    text-decoration: none;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "quicksand";
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    width: 50px;
+    text-align: center;
+    background: none repeat scroll 0 0 #E0645C;
+    color: white;
+    margin-right: 200px;
+    margin-top: 5px;
+}
 
+.cart:hover {
+    background: none repeat scroll 0 0 #999999;
+    color: white;
+}
 
+.buy {
+    text-decoration: none;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "quicksand";
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    width: 50px;
+    text-align: center;
+    background: none repeat scroll 0 0 rgb(61, 67, 77);
+    color: white;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    float: right;
+}
 
+.buy:hover {
+    background: none repeat scroll 0 0 #a3be5f;
+    color: white;
+}
 
+.white {
+    height: 670px;
+    width: 620px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+}
+.potato {
+    height: 50px;
+    width: 620px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+}
+.white1 {
+    height: 100px;
+    width: 620px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+}
+
+.inner {
+    padding: 10px 10px 20px 10px;
+}
+
+.inner1 {
+    padding: 10px 10px 20px 10px;
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "quicksand";
+}
+
+.total {
+    margin: 12px;
+    padding: 0;
+    font-family: "quicksand";
+    font-size: 20px;
+    display: inline-block;
+}
+.total-num {
+    margin: 12px;
+    padding: 0;
+    font-family: "quicksand";
+    font-size: 20px;
+    float: right;
+    display: inline-block;
+
+}
+.title1, .price1 {
+    display: inline-block;
+}
+.price1 {
+    float: right;
+}
+.title1 {
+    float: top;
+}
+title {
+    display: inline-block;
+}
+
+.price {
+    font-weight: bold;
+}
 
 
 
@@ -55,9 +193,32 @@ body {
     margin-right: auto;
 }
 
+.s-wrapper {
+    overflow: scroll;
+    width: 650px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h1 {
+    margin-top: 70px;
     color: rgb(61, 67, 77);
+    font-family: "quicksand";
+
 }
 h2 {
-    color: rgb(61, 67, 77);
+    color: rgb(134, 145, 159);
+    font-family: "quicksand";
+
+}
+
+.picture {
+    height: 600px;
+    width: 600px;
+}
+
+.picture1 {
+    height: 80px;
+    width: 80px;
 }

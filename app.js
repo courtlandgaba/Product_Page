@@ -11,7 +11,8 @@
                 controller: 'MainController as mainCtrl'
             })
             .when('/cart', {
-                templateUrl: 'views/main2.html'
+                templateUrl: 'views/cart.html',
+                controller: 'MainController as mainCtrl'
             })
     });
 })();

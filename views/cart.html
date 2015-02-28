@@ -1,0 +1,38 @@
+<div class="header">
+
+    <div class="header-left">
+        <a href="#/">products</a>
+
+    </div>
+
+    <div class="header-right">
+
+
+    </div>
+
+</div>
+
+
+<div class="s-wrapper">
+    <h1>shopping cart.</h1>
+
+    <ul>
+        <li class="white1" ng-repeat="product in mainCtrl.superproducts">
+            <div class="inner1">
+                <img class="picture1" src="{{product.picture}}">
+                <p class = "title1">{{product.title}}</p>
+                <p class = "price1">{{product.price}}</p>
+            </div>
+        </li>
+    </ul>
+
+
+    <div class="potato">
+        <div class="total">total price = </div>
+        <div class="total-num">$2345</div>
+
+    </div>
+
+
+
+</div>
