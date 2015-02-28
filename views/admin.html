@@ -1,0 +1,28 @@
+<div class="header">
+
+    <div class="header-left">
+        <a href="#/">products</a>
+
+    </div>
+
+    <div class="header-right">
+        <a href="#/cart" class ="cart invert">cart.</a>
+        <a href="#/admin" class ="admin invert">admin.</a>
+    </div>
+
+
+
+    <div class="add">
+
+        <form ng-submit="mainCtrl.addSuperProduct(newProduct)">
+          <input type="text" ng-model="newProduct.name" placeholder="Picture">
+          <input type="text" ng-model="newProduct.title" placeholder="Title">
+          <input type="text" ng-model="newProduct.price" placeholder="Price">
+
+          <button type="submit">Add Product</button>
+        </form>
+
+    </div>
+
+
+</div>

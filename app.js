@@ -14,5 +14,9 @@
                 templateUrl: 'views/cart.html',
                 controller: 'MainController as mainCtrl'
             })
+            .when('/admin', {
+                templateUrl: 'views/admin.html',
+                controller: 'MainController as mainCtrl'
+            })
     });
 })();
