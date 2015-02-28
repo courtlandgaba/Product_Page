@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <h1>Welcome to Products!</h1>
+    <h2>find cool stuff and buy cool stuff.</h2>
+
+
+    <ul>
+        <li ng-repeat="product in mainCtrl.superproducts">
+            {{product.picture}}
+            <br>
+            {{product.title}}
+            <br>
+            {{product.price}}
+        </li>
+    </ul>
+
+
+    <form ng-submit="mainCtrl.addSuperProduct(newProduct)">
+      <input type="text" ng-model="newProduct.name" placeholder="Picture">
+      <input type="text" ng-model="newProduct.title" placeholder="Title">
+      <input type="text" ng-model="newProduct.price" placeholder="Price">
+
+      <button type="submit">Add Product</button>
+    </form>
+
+
+
+
+
+
+</div>

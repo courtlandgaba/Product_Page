@@ -1,0 +1,63 @@
+body {
+    margin:0;
+    padding: 0;
+    background-color: rgb(235, 236, 237);
+}
+.header {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(61, 67, 77);
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-left {
+    float: left;
+    display: inline-block;
+}
+
+.header-left a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    vertical-align: middle;
+}
+.header-left a:hover{
+    color: #dfdfdf;
+    text-decoration: none;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.header-right {
+    float: right;
+    display: inline-block;
+}
+
+.cart {
+    color: white;
+    background-color: rgb(187, 190, 196);
+}
+
+
+
+
+
+
+
+
+.wrapper {
+    overflow: scroll;
+    width: 650px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: rgb(61, 67, 77);
+}
+h2 {
+    color: rgb(61, 67, 77);
+}
