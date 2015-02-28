@@ -106,6 +106,12 @@ ul {
     background: none repeat scroll 0 0 #a3be5f;
     color: white;
 }
+
+.buy:focus {
+    outline-color: transparent;
+    outline-style: none;
+    background: none repeat scroll 0 0 #a3be5f;
+}
 .remove {
     text-decoration: none;
     border: 0 none;
@@ -136,6 +142,10 @@ ul {
 .remove:hover {
     color: rgb(255, 45, 45);
 
+}
+.remove:focus {
+    outline-color: transparent;
+    outline-style: none;
 }
 
 .admin{

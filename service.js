@@ -1,12 +1,12 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .factory('SuperProductsService', function () {
-      var superProducts = [
+    .factory('ProductsService', function () {
+      var Products = [
         {
           picture: "pic1.png",
           title: "R-KAID-R Limited Edition Arcade",
-          price: "2,900"
+          price: "2900"
         },
         {
           picture: "pic2.png",
@@ -52,19 +52,50 @@
           picture: "pic10.png",
           title: "Thor USB Stick",
           price: "33"
-        },
+        }
       ];
 
-      var getSuperProducts = function () {
-        return superProducts;
+      var cartProducts = [
+
+      ];
+
+      var getProducts = function () {
+        return Products;
       };
-      var addSuperProduct = function (hero) {
-        superProducts.push(hero);
-      }
+
+      var addProduct = function (newProduct) {
+        Products.push(newProduct);
+      };
+
+      var getCartProducts = function () {
+        return cartProducts;
+      };
+      var addCartProduct = function (newCartProduct) {
+        cartProducts.push(newCartProduct);
+      };
+
+      var removeCartProduct = function (cartProduct) {
+        cartProducts.pop(cartProduct);
+      };
+
+      var getTotalPriceOfCartProducts = function() {
+          var totalPrice = 0;
+
+          for (var i = 0; i < cartProducts.length; i++) {
+              var price = parseInt(cartProducts[i].price);
+              totalPrice += price;
+          };
+
+          return totalPrice;
+      };
 
       return {
-        getProducts: getSuperProducts,
-        addProduct: addSuperProduct
+        getProducts: getProducts,
+        addProduct: addProduct,
+        getCartProducts: getCartProducts,
+        addCartProduct: addCartProduct,
+        removeCartProduct: removeCartProduct,
+        getTotalPriceOfCartProducts: getTotalPriceOfCartProducts
       };
     });
 
