@@ -52,43 +52,63 @@
           picture: "pic10.png",
           title: "Thor USB Stick",
           price: "33"
+        },
+        {
+          picture: "pic11.png",
+          title: "Nobody Cares Business Cards",
+          price: "10"
+        },
+        {
+          picture: "pic12.png",
+          title: "Nubè Hammock Shelter",
+          price: "275"
+        },
+        {
+          picture: "pic13.png",
+          title: "Cooler Tube",
+          price: "22"
+        },
+        {
+          picture: "pic14.png",
+          title: "Philips Clear LED Light Bulb",
+          price: "19"
+        },
+        {
+          picture: "pic15.png",
+          title: "I'll Never Lego Print",
+          price: "55"
+        },
+        {
+          picture: "pic16.png",
+          title: "Samsung Gear Fit Fitness Tracker",
+          price: "275"
         }
       ];
-
       var cartProducts = [
-
       ];
-
       var getProducts = function () {
         return Products;
       };
-
       var addProduct = function (newProduct) {
-        Products.push(newProduct);
+        Products.unshift(newProduct);
       };
-
       var getCartProducts = function () {
         return cartProducts;
       };
       var addCartProduct = function (newCartProduct) {
         cartProducts.push(newCartProduct);
       };
-
       var removeCartProduct = function (cartProduct) {
         cartProducts.pop(cartProduct);
       };
-
       var getTotalPriceOfCartProducts = function() {
           var totalPrice = 0;
-
           for (var i = 0; i < cartProducts.length; i++) {
               var price = parseInt(cartProducts[i].price);
               totalPrice += price;
           };
-
           return totalPrice;
       };
-
       return {
         getProducts: getProducts,
         addProduct: addProduct,
@@ -98,5 +118,4 @@
         getTotalPriceOfCartProducts: getTotalPriceOfCartProducts
       };
     });
-
 })();

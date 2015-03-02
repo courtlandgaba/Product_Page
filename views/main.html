@@ -1,29 +1,21 @@
 <div class="header">
-
     <div class="header-left">
         <a href="#/">products</a>
-
     </div>
-
     <div class="header-right">
         <a href="#/cart" class ="cart invert">cart.</a>
         <a href="#/admin" class ="admin invert">admin.</a>
-
-
     </div>
-
 </div>
 
 
 <div class="wrapper">
     <h1>welcome to products!</h1>
     <h2>find cool stuff and buy cool stuff.</h2>
-
     <ul>
         <li class="white" ng-repeat="product in mainCtrl.products">
             <div class="inner">
                 <img class="picture" src="{{product.picture}}">
-                <br>
                 <p class = "title">{{product.title}}</p>
                 <button class="buy" ng-click="mainCtrl.addCartProduct(product)">buy.</button>
                 <p class = "price">${{product.price}}</p>

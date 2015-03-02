@@ -11,7 +11,7 @@ body {
     background-color: rgb(61, 67, 77);
     padding: 0;
     margin: -8px;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 4px -2px gray;
     z-index: 3;
 }
 

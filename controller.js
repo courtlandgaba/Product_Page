@@ -21,6 +21,8 @@
         mainCtrl.removeCartProduct = function (cartProduct) {
             ProductsService.removeCartProduct(cartProduct);
             $scope.removeCartProduct = {};
+//            ProductsService.getTotalPriceOfCartProducts();
+
         };
 
         // mainCtrl.getTotalPriceOfCartProducts = function() {
