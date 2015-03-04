@@ -1,28 +1,48 @@
 <div class="header">
-
     <div class="header-left">
         <a href="#/">products</a>
-
     </div>
 
     <div class="header-right">
         <a href="#/cart" class ="cart invert">cart.</a>
         <a href="#/admin" class ="admin invert">admin.</a>
     </div>
+</div>
 
 
+<div class="wrapper2">
+    <h1 class="stupidd">add new product.</h1>
 
-    <div class="add">
 
-        <form ng-submit="mainCtrl.addProduct(newProduct)">
-          <input type="text" ng-model="newProduct.name" placeholder="Picture">
-          <input type="text" ng-model="newProduct.title" placeholder="Title">
-          <input type="text" ng-model="newProduct.price" placeholder="Price">
+    <div class="box">
+      <input type="text" ng-model="newProduct.picture" placeholder="Picture">
+      <input type="text" ng-model="newProduct.title" placeholder="Title">
+      <textarea name="" ng-model="newProduct.description" id="">
 
-          <button type="submit">Add Product</button>
-        </form>
-
+      </textarea>
+      <input type="text" ng-model="newProduct.price" placeholder="Price"><
+      <button ng-click="admin.addProduct(newProduct)">Create</button>
     </div>
 
+
+
+</div>
+
+<div class="s-wrapper2">
+    <h1 class="stupid">edit products.</h1>
+
+
+
+    <ul>
+        <li class="white2" ng-repeat="product in admin.products">
+            <div class="inner2" >
+                <img class="picture2" ng-src="{{product.picture}}" alt="{{product.title}}">
+                <p class = "title2">{{product.title}}</p>
+                <p><a class="edit" href="#/admin/edit/{{product._id}}">edit.</a><button class="deletee" ng-click="admin.deleteProduct(product._id)">delete.</button></p>
+                <p class = "price2">${{product.price}}</p>
+
+            </div>
+        </li>
+    </ul>
 
 </div>

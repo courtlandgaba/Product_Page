@@ -16,28 +16,30 @@
 </div>
 
 
-<div class="s-wrapper">
+<div class="s-wrapper" >
     <h1>shopping cart.</h1>
+    <div ng-controller="CartController as cart">
 
-    <ul>
-        <li class="white1" ng-repeat="product in mainCtrl.cartProducts">
-            <div class="inner1">
-                <img class="picture1" src="{{product.picture}}">
-                <p class = "title1">{{product.title}}</p>
-                <p class = "price1">{{product.price}}</p>
-            </div>
-            <div class="inner1" id="xxx">
-                <button class="remove" ng-click="mainCtrl.removeCartProduct(product)">x</button>
+        <ul>
+            <li class="white1" ng-repeat="item in cart.items">
+                <div class="inner1">
+                    <img class="picture1" ng-src="{{item.picture}}">
+                    <p class="title1">{{item.title}}</p>
+                    <p class="price1">{{item.price | currency}}</p>
+                </div>
+                <div class="inner1" id="xxx">
+                    <button class="remove" ng-click="cart.removeCartProduct(item)">x</button>
+                </div>
+            </li>
+        </ul>
 
-            </div>
-        </li>
-    </ul>
+    </div>
+
 
 
     <div class="potato">
         <div class="total">total price = </div>
-        <div class="dollar">$</div>
-        <div class="total-num"> {{mainCtrl.getTotalPriceOfCartProducts}} </div>
+        <div class="total-num"> {{cart.updateTotal() | currency}}</div>
     </div>
 
 

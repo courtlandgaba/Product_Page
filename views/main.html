@@ -1,3 +1,4 @@
+
 <div class="header">
     <div class="header-left">
         <a href="#/">products</a>
@@ -12,15 +13,20 @@
 <div class="wrapper">
     <h1>welcome to products!</h1>
     <h2>find cool stuff and buy cool stuff.</h2>
+
+
     <ul>
         <li class="white" ng-repeat="product in mainCtrl.products">
             <div class="inner">
-                <img class="picture" src="{{product.picture}}">
-                <p class = "title">{{product.title}}</p>
-                <button class="buy" ng-click="mainCtrl.addCartProduct(product)">buy.</button>
-                <p class = "price">${{product.price}}</p>
+                <img class="picture" ng-src="{{product.picture}}">
+                <a class="title" href="#/detail/{{product._id}}">{{product.title}}</a>
+                <div ng-controller="CartController as cart">
+                    <button class="buy" ng-click="cart.addCartProduct(product)">buy.</button>
+                </div>
+                <p class = "price">{{product.price | currency}}</p>
             </div>
         </li>
     </ul>
+
 
 </div>

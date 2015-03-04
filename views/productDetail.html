@@ -1,0 +1,44 @@
+<div class="header">
+    <div class="header-left">
+        <a href="#/">products</a>
+    </div>
+    <div class="header-right">
+        <a href="#/cart" class ="cart invert">cart.</a>
+        <a href="#/admin" class ="admin invert">admin.</a>
+    </div>
+</div>
+
+
+
+
+<div class="wrapper3" ng-repeat="product in mainCtrl.products">
+    <div class="white3">
+        <div class="inner3">
+          <img class="picture3" ng-src="{{mainCtrl.singleProduct.picture}}" alt="{{mainCrl.singleProduct.title}}">
+          <h3 class="title">{{mainCtrl.singleProduct.title}}</h3>
+          <h3>comments.</h3>
+          <ul>
+              <li ng-repeat="comment in mainCtrl.products">
+
+              </li>
+              <input type="text" ng-model="newComment.comment" placeholder="enter comment">
+              <button ng-click="mainCtrl.addComment(newComment)">submit comment.</button>
+
+          </ul>
+        </div>
+    </div>
+    <div class="white4">
+        <div class="inner3">
+            <p>{{mainCtrl.singleProduct.price | currency}}</p>
+            <h3>description.</h3>
+            <div class="speck">
+
+                <p>{{mainCtrl.singleProduct.description}}</p>
+
+            </div>
+        </div>
+        <div ng-controller="CartController as cart">
+            <button class="buyy" ng-click="cart.addCartProduct(product)">buy.</button>
+        </div>
+    </div>
+</div>

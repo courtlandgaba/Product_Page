@@ -12,7 +12,16 @@ body {
     padding: 0;
     margin: -8px;
     box-shadow: 0 4px 4px -2px gray;
-    z-index: 3;
+    display: block;
+}
+
+.wrapper2 {
+    overflow: scroll;
+    width: 650px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .header-left {
@@ -77,8 +86,30 @@ ul {
     background: none repeat scroll 0 0 #999999;
     color: white;
 }
-
-.buy {
+.deletee {
+    text-decoration: none;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "quicksand";
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    width: 6 0px;
+    text-align: center;
+    background: none repeat scroll 0 0 rgb(61, 67, 77);
+    color: white;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    float: right;
+}
+.buy, .edit , .buyy{
     text-decoration: none;
     border: 0 none;
     border-radius: 2px 2px 2px 2px;
@@ -101,16 +132,28 @@ ul {
     margin-bottom: 15px;
     float: right;
 }
-
-.buy:hover {
+.buyy {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.buy:hover, .edit:hover, .buyy:hover{
     background: none repeat scroll 0 0 #a3be5f;
     color: white;
 }
+.deletee:hover{
+    background: none repeat scroll 0 0 #ce0000;
+    color: white;
+}
 
-.buy:focus {
+.buy:focus, .edit:focus, .buyy:focus {
     outline-color: transparent;
     outline-style: none;
     background: none repeat scroll 0 0 #a3be5f;
+}
+.deletee:hover {
+    outline-color: transparent;
+    outline-style: none;
+    background: none repeat scroll 0 0 #ce0000;
 }
 .remove {
     text-decoration: none;
@@ -180,6 +223,15 @@ ul {
     border-radius: 3px;
     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
 }
+.stupid {
+    margin-top: 0;
+}
+.stupidd {
+    margin-top: 50px;
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .add {
     height: 200px;
@@ -191,7 +243,7 @@ ul {
     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    display: block;
 }
 .potato {
     height: 50px;
@@ -212,6 +264,48 @@ ul {
     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
 }
 
+.white2 {
+    height: 100px;
+    width: 620px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+.white3 {
+    margin-top: 50px;
+    height: 100%;
+    width: 620px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+.speck {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    height: 220px;
+}
+.white4 {
+    margin-top: 50px;
+    height: 370px;
+    width: 350px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #D5D6D7;
+    border-radius: 3px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    vertical-align: top;
+}
+
+
 .inner {
     padding: 10px 10px 20px 10px;
 }
@@ -219,6 +313,12 @@ ul {
 .inner1 {
     padding: 10px 10px 20px 10px;
 
+}
+.inner2 {
+    padding: 10px 10px 20px 10px;
+}
+.inner3 {
+    padding: 10px 10px 20px 10px;
 }
 
 p {
@@ -234,14 +334,7 @@ p {
     font-size: 20px;
     display: inline-block;
 }
-.dollar {
-    margin: 12px 0 0 350px;
-    padding: 0;
-    font-family: "quicksand";
-    font-size: 20px;
-    display: inline-block;
-    float: center;
-}
+
 .total-num {
     margin: 12px;
     padding: 0;
@@ -257,27 +350,53 @@ p {
 .price1 {
     float: right;
     margin-top: -16px;
-
+}
+.price2 {
+    float: right;
+    margin-top: 0px;
 }
 .title1 {
     float: left;
     margin-top: -16px;
     margin-left: 5px;
+    text-decoration: none;
+    font-family: "quicksand";
 }
-title {
-    display: inline-block;
-}
+.title2 {
+    float: left;
+    margin-top: 0px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-family: "quicksand";
 
-.price {
+}
+.title {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "quicksand";
+    color:rgb(61, 67, 77);
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
     font-weight: bold;
 }
 
-
-
+.title:hover {
+    color:   #1f518e;
+}
+.price {
+    font-weight: bold;
+}
 .wrapper {
     overflow: scroll;
     width: 650px;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper3 {
+    height: 100%;
+    width: 978px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -289,9 +408,16 @@ title {
     margin-left: auto;
     margin-right: auto;
 }
+.s-wrapper2 {
+    overflow: scroll;
+    width: 620px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 h1 {
-    margin-top: 70px;
+    margin-top: 65px;
     color: rgb(61, 67, 77);
     font-family: "quicksand";
 
@@ -299,9 +425,11 @@ h1 {
 h2 {
     color: rgb(134, 145, 159);
     font-family: "quicksand";
-
 }
-
+h3 {
+    color: rgb(134, 145, 159);
+    font-family: "quicksand";
+}
 .picture {
     height: 600px;
     width: 600px;
@@ -312,4 +440,18 @@ h2 {
     width: 80px;
     float: left;
     margin-top: -18px
+}
+.picture2 {
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-top: 0;
+    display: block;
+}
+.picture3 {
+    height: 600px;
+    width: 600px;
+    float: left;
+    margin-top: 0;
+    display: block;
 }

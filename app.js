@@ -12,11 +12,26 @@
             })
             .when('/cart', {
                 templateUrl: 'views/cart.html',
-                controller: 'MainController as mainCtrl'
+                controller: 'CartController as cart'
             })
             .when('/admin', {
                 templateUrl: 'views/admin.html',
+                controller: 'AdminController as admin'
+            })
+            .when('/admin/new', {
+                templateUrl: 'views/newProduct.html',
+                controller: 'AdminController as admin'
+            })
+            .when('/admin/edit/:productId', {
+                templateUrl: 'views/editProduct.html',
+                controller: 'AdminController as admin'
+            })
+            .when('/detail/:productId', {
+                templateUrl: 'views/productDetail.html',
                 controller: 'MainController as mainCtrl'
             })
-    });
+
+
+    })
+    .constant('_', _)
 })();
