@@ -54,7 +54,7 @@
           };
           var removeCartProduct = function (item) {
               var index = cart.indexOf(item);
-              cart.splice(item,1);
+              cart.splice(index,1);
           };
           var getTotalPriceOfCartProducts = function () {
               if(!cart.length) return 0;

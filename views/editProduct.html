@@ -4,9 +4,9 @@
     <form >
       <input type="text" ng-model="admin.singleProduct.picture" placeholder="Picture">
       <input type="text" ng-model="admin.singleProduct.title" placeholder="Title">
-      <p><textarea name="" ng-model="admin.singleProduct.description" id="" cols="30" rows="10">
+      <textarea name="" ng-model="admin.singleProduct.description" id="" cols="30" rows="6">
           {{admin.singleProduct.description}}
-      </textarea></p>
+      </textarea>
       <input type="text" ng-model="admin.singleProduct.price" placeholder="Price">
       <button ng-click="admin.updateProduct(admin.singleProduct)">Update</button>
     </form>
