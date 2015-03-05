@@ -18,7 +18,7 @@
           <h3 class="title">{{mainCtrl.singleProduct.title}}</h3>
           <h3>comments.</h3>
           <ul>
-              <li ng-repeat="comment in mainCtrl.products">
+              <li>
 
               </li>
               <input type="text" ng-model="newComment.comment" placeholder="enter comment">
@@ -32,9 +32,7 @@
             <p>{{mainCtrl.singleProduct.price | currency}}</p>
             <h3>description.</h3>
             <div class="speck">
-
                 <p>{{mainCtrl.singleProduct.description}}</p>
-
             </div>
         </div>
         <div ng-controller="CartController as cart">
