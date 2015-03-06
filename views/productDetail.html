@@ -8,22 +8,18 @@
     </div>
 </div>
 
-
-
-
-<div class="wrapper3" ng-repeat="product in mainCtrl.products">
+<div class="wrapper3">
     <div class="white3">
         <div class="inner3">
           <img class="picture3" ng-src="{{mainCtrl.singleProduct.picture}}" alt="{{mainCrl.singleProduct.title}}">
           <h3 class="title">{{mainCtrl.singleProduct.title}}</h3>
           <h3>comments.</h3>
           <ul>
-              <li>
+              <li ng-repeat="comment in mainCtrl.comments">
 
               </li>
               <input type="text" ng-model="newComment.comment" placeholder="enter comment">
-              <button ng-click="mainCtrl.addComment(newComment)">submit comment.</button>
-
+              <button ng-click="mainCtrl.addComment(mainCtrl.comments)">submit comment.</button>
           </ul>
         </div>
     </div>
@@ -36,7 +32,7 @@
             </div>
         </div>
         <div ng-controller="CartController as cart">
-            <button class="buyy" ng-click="cart.addCartProduct(product)">buy.</button>
+            <button class="buyy" ng-click="cart.addCartProduct(mainCtrl.singleProduct)">buy.</button>
         </div>
     </div>
 </div>
