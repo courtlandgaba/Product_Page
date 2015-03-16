@@ -39,9 +39,7 @@
           createComment: createComment,
           getComments: getComments,
       }
-
   })
-
 
       .factory('CartService', function (_) {
           var cart = [];
@@ -68,8 +66,5 @@
               getTotalPriceOfCartProducts: getTotalPriceOfCartProducts,
               removeCartProduct: removeCartProduct,
           };
-
       });
-
-
 })();

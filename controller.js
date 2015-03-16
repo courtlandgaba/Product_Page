@@ -2,6 +2,8 @@
     "use strict";
     angular.module('demoApp')
     .controller('MainController', function (ProductService, $routeParams, $location, _, $rootScope) {
+        console.log("PRODUCTS: Configuring MainController")
+
         var mainCtrl = this;
 
 
@@ -13,14 +15,16 @@
         });
         mainCtrl.currentIndex = $routeParams.productId;
 
-        mainCtrl.addComment = function (newComment) {
-            newComment.comment = parseInt(newComment.comment);
-            ProductService.createComment(newComment);
-            $location.path('#/detail/{{product._id}}');
-        };
-        ProductService.getComments().success(function (data) {
-            mainCtrl.comments = data;
-        });
+        // mainCtrl.addComment = function (newComment) {
+        //     newComment.comment = parseInt(newComment.comment);
+        //     ProductService.createComment(newComment);
+        //     $location.path('#/detail/{{product._id}}');
+        // };
+        // ProductService.getComments().success(function (data) {
+        //     mainCtrl.comments = data;
+        // });
+
+        console.log("PRODUCTS: Done Configuring MainController")
 
     })
 
